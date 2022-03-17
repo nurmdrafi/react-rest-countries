@@ -2,4 +2,8 @@
     background-color: rgb(255, 240, 243);
     padding: 10px;
     margin: 10px;
+    border-radius: 10px;
+}
+.country img{
+    width: 90px;
 }

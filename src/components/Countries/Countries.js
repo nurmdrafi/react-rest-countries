@@ -16,6 +16,7 @@ const Countries = () => {
         {countries.map((country) => (
           <Country
             country={country} // send all properties together
+            key={country.cca3} // unique key
             /* name={country?.name?.common}
             capital={country?.capital?.[0]}
             image={country?.flags?.png}
