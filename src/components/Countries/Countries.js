@@ -15,10 +15,11 @@ const Countries = () => {
       <div className="countries">
         {countries.map((country) => (
           <Country
-            name={country?.name?.common}
+            country={country} // send all properties together
+            /* name={country?.name?.common}
             capital={country?.capital?.[0]}
             image={country?.flags?.png}
-            population={country?.population}
+            population={country?.population} */
           ></Country>
         ))}
       </div>
