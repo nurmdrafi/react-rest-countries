@@ -11,21 +11,29 @@ function App() {
     </div>
   );
 }
-// Create functinal component
-function LoadCountries() {
-  const [countries, setCountries] = useState([]);
 
+/* // Create functinal component
+
+// Step 01 - Create functional component
+function LoadCountries() {
+  // Step 02 - useState
+  const [countries, setCountries] = useState([]); // [state variable, state f()]
+  // Step 03 - useEffect
+  // useEffect(() =>{} [])
   useEffect(() => {
+    // Step 04 - fetch api
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       // .then((data) => console.log(data));
-      .then((data) => setCountries(data));
+      .then((data) => setCountries(data)); // data pass to the state function
   }, []);
 
+  // Step 05 - Create Parent Component
   return (
     <div>
       <h1>Visiting Every country of the world!!!</h1>
       <div>
+      // Step 06 - use array.map and set attribute/property + optional chaining
         {countries.map((country) => (
           <Country
             name={country?.name}
@@ -38,7 +46,7 @@ function LoadCountries() {
     </div>
   );
 }
-
+// Step 07 - Create child component
 function Country(props) {
   return (
     <div className="countries">
@@ -49,5 +57,5 @@ function Country(props) {
     </div>
   );
 }
-
+ */
 export default App;
